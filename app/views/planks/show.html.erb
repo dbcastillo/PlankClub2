@@ -4,5 +4,9 @@ Type: <%= @plank.planktype %>
 <hr>
 <% @plank.students.each do |student| %>
 Student: <%= student.name  %>
--- Time in Minutes: <%= @plank.duration %><br>
+  <br>
 <% end %>
+<br>
+<%= link_to "Edit Plank", edit_plank_path(@plank) %>
+<%= link_to 'Delete Plank', plank_path(@plank), method: :delete,
+data: { confirm: 'Are you sure?' } %>  
