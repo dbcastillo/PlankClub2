@@ -1,5 +1,5 @@
 class StudentsController < ApplicationController
-  before_action :authorized
+  before_action :authorized, except: [:new, :create]
 
   def index
     @students = Student.all
@@ -10,13 +10,14 @@ class StudentsController < ApplicationController
     @student_plank = [StudentPlank.find_by(student: @student)]
   end
 
+# registration
   def new
     @student = Student.new
   end
 
   def create
-    @student = Student.create(username_params)
-    if @student.valid?
+    @student = Student.new(username_params)
+    if @student.save
       redirect_to student_path(@student)
     else
       render :new
@@ -45,11 +46,11 @@ class StudentsController < ApplicationController
   private
 
   def student_params
-    params.require(:student).permit(:name, :mod)
+    params.require(:student).permit(:name, :mod, :img_url)
   end
 
   def username_params
-    params.require(:student).permit(:username, :password, :name, :mod)
+    params.require(:student).permit(:username, :password, :name, :mod, :img_url)
   end
 
   def authorized

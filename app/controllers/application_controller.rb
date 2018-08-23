@@ -9,5 +9,5 @@ class ApplicationController < ActionController::Base
 
   def is_loggedin?
     !!current_student
-  end
+  end 
 end
