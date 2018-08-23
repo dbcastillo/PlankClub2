@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   resources :students
   resources :planks
   resources :welcome, only: [:index]
+  root to: "welcome#index"
   get '/students/:id/planks/new', to: "student_planks#new", as: 'new_student_plank'
   post '/student/:id/planks', to: "student_planks#create", as: 'student_planks'
   get '/student/:id/planks/:sp_id/edit', to: 'student_planks#edit', as: 'edited_plank'
