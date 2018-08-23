@@ -1,4 +1,6 @@
 class PlanksController < ApplicationController
+  before_action :authorized
+
   def index
     @planks = Plank.all
   end
@@ -42,5 +44,9 @@ class PlanksController < ApplicationController
   private
   def plank_params
     params.require(:plank).permit(:planktype)
+  end
+
+  def authorized
+    redirect_to login_path unless session[:student_id]
   end
 end

@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 2018_08_20_191243) do
   create_table "students", force: :cascade do |t|
     t.string "name"
     t.integer "mod"
+    t.string "username"
+    t.string "password_digest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

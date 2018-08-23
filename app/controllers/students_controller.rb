@@ -1,4 +1,5 @@
 class StudentsController < ApplicationController
+  before_action :authorized
 
   def index
     @students = Student.all
@@ -14,8 +15,8 @@ class StudentsController < ApplicationController
   end
 
   def create
-    @student = Student.new(student_params)
-    if @student.save
+    @student = Student.create(username_params)
+    if @student.valid?
       redirect_to student_path(@student)
     else
       render :new
@@ -45,6 +46,14 @@ class StudentsController < ApplicationController
 
   def student_params
     params.require(:student).permit(:name, :mod)
+  end
+
+  def username_params
+    params.require(:student).permit(:username, :password, :name, :mod)
+  end
+
+  def authorized
+    redirect_to login_path unless session[:student_id]
   end
 
 end

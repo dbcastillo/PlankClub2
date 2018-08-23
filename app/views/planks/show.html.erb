@@ -7,6 +7,8 @@ Student: <%= student.name  %>
   <br>
 <% end %>
 <br>
-<%= link_to "Edit Plank", edit_plank_path(@plank) %>
-<%= link_to 'Delete Plank', plank_path(@plank), method: :delete,
-data: { confirm: 'Are you sure?' } %>  
+<% if current_student.id == 5 %>
+  <%= link_to "Edit Plank", edit_plank_path(@plank) %>
+  <%= link_to 'Delete Plank', plank_path(@plank), method: :delete,
+data: { confirm: 'Are you sure?' } %>
+<% end %>

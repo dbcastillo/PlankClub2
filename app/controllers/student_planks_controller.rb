@@ -6,13 +6,28 @@ class StudentPlanksController < ApplicationController
   end
 
   def create
-    @student = Student.find(params[:id])
-    @student_plank = StudentPlank.new(student_plank_params)
-    @student_plank.student_id = @student.id
-    if @student_plank.save
-      redirect_to student_path(@student)
+    if params[:student_plank][:plank_id] != "5"
+      @student = Student.find(params[:id])
+      @student_plank = StudentPlank.new(student_plank_params)
+      @student_plank.student_id = @student.id
+      if @student_plank.save
+        redirect_to student_path(@student)
+      else
+        render :new
+      end
     else
-      render :new
+      if current_student.id == 5
+        @student = Student.find(params[:id])
+        @student_plank = StudentPlank.new(student_plank_params)
+        @student_plank.student_id = @student.id
+        if @student_plank.save
+          redirect_to student_path(@student)
+        else
+          render :new
+        end
+      else
+        render :tito
+      end
     end
   end
 
