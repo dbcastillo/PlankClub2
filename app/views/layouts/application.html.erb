@@ -25,24 +25,22 @@
     <ul class="nav navbar-nav navbar-right">
       <li> <%= link_to "Students", students_path  %></li>
       <li> <%= link_to "Planks", planks_path %></li>
+      <li> <% if current_student%>
+       <%= form_tag "/logout", method: :delete do %>
+       <%= submit_tag "Logout" %>
+       <% end %>
+      <!-- If not logged in, show login -->
+      <% else %>
+        <%= link_to "log in", login_path %>
+      <% end %> </li>
     </ul>
 
     </div>
     </nav>
     </header>
-    <%= yield %>
+    <div class="mx-auto" style="width: 800px;">
+      <%= yield %>
+    </div>
   </div>
-   <!--  If logged in, show logout -->
-   <%= yield %>
-   <br>
-   <br>
-   <% if current_student%>
-    <%= form_tag "/logout", method: :delete do %>
-    <%= submit_tag "Logout" %>
-    <% end %>
-   <!-- If not logged in, show login -->
-   <% else %>
-     <%= link_to "log in", login_path %>
-   <% end %>
   </body>
 </html>

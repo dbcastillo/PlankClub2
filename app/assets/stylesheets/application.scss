@@ -1,20 +1,30 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "background";
 
-body html {
-  margin: 0;
-  padding:0;
+.center {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
 }
 
-.backgroundimg {
-  background-image: url('https://30dayfitnesschallenge.co.uk/wp-content/uploads/2014/09/hero-30-day-plank-challenge1.jpg');
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-  
-  height: 100vh;
-  width: 100%;
-  background-color: hsla(10,100%,100%,0.50);
-  background-blend-mode: overlay;
-  background-repeat: no-repeat;
+.mx-auto {
+  margin: auto;
 }
+// .mt-0 {
+//   margin-top: 0;
+// }
+//
+// .ml-1 {
+//   margin-left: ($spacer-x * .25) !important;
+// }
+//
+// .px-2 {
+//   padding-left: ($spacer-x * .5) !important;
+//   padding-right: ($spacer-x * .5) !important;
+// }
+//
+// .p-3 {
+//   padding: $spacer-y $spacer-x !important;
+// }

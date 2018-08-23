@@ -1,5 +1,6 @@
+<h3>Plank Club LeaderBoard</h3>
 <% @planks.each do |plank| %>
-<%= plank.planktype %> :
+<h4> <%= plank.planktype %> : </h4>
 <% plank.students.each do |student| %>
 <ol> <%= student.name %> : <%= (student.student_planks.select {|student_plank| student_plank.plank == plank})[0].duration %> </ol>
 <% end %>
