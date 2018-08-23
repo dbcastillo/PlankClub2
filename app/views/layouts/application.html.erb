@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>PlankClub2</title>
     <%= csrf_meta_tags %>
@@ -7,20 +7,40 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
 
   <body>
-   <!--  If logged in, show logout -->
-   <%= yield %>
-   <br>
-   <br>
-   <% if current_student%>
-    <%= form_tag "/logout", method: :delete do %>
-    <%= submit_tag "Logout" %>
-    <% end %>
-   <!-- If not logged in, show login -->
-   <% else %>
-     <%= link_to "log in", login_path %>
-   <% end %>
+    <div class="row backgroundimg">
+      <div class="container">
+
+    </div>
+
+    <header class="container">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+          <%= link_to "PLANK CLUB", welcome_index_path, class:"navbar-brand" %>
+        </div>
+    <ul class="nav navbar-nav navbar-right">
+      <li> <%= link_to "Students", students_path  %></li>
+      <li> <%= link_to "Planks", planks_path %></li>
+      <li> <% if current_student%>
+       <%= form_tag "/logout", method: :delete do %>
+       <%= submit_tag "Logout" %>
+       <% end %>
+      <!-- If not logged in, show login -->
+      <% else %>
+        <%= link_to "log in", login_path %>
+      <% end %> </li>
+    </ul>
+
+    </div>
+    </nav>
+    </header>
+    <div class="mx-auto" style="width: 800px;">
+      <%= yield %>
+    </div>
+  </div>
   </body>
 </html>

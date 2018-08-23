@@ -3,6 +3,6 @@ class StudentPlank < ApplicationRecord
   belongs_to :student
 
   def info
-    "#{self.plank.planktype} - #{self.duration}"
+    self.plank.planktype + " : " + "#{self.duration}"
   end
 end
