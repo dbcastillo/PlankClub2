@@ -5,7 +5,7 @@ class CreateStudents < ActiveRecord::Migration[5.2]
       t.integer :mod
       t.string :username
       t.string :password_digest
-
+      t.string :img_url
       t.timestamps
     end
   end

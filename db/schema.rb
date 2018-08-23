@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(version: 2018_08_20_191243) do
     t.integer "mod"
     t.string "username"
     t.string "password_digest"
+    t.string "img_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
