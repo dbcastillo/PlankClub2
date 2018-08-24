@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
 @import "bootstrap-sprockets";
 @import "bootstrap";
 @import "background";
@@ -11,6 +12,22 @@
 
 .mx-auto {
   margin: auto;
+  color: auto;
+  background-color: rgba(101,124,160, 0.2);
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.new-user-button {
+  font-size: 3em;
+  display: inline-block;
+  transition: 10s;
+
+  &:hover {
+    text-decoration: none;
+    color: white;
+    transform: scale(5);
+  }
 }
 // .mt-0 {
 //   margin-top: 0;
