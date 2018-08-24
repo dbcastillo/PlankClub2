@@ -23,6 +23,10 @@
           <%= link_to "PLANK CLUB", welcome_index_path, class:"navbar-brand" %>
         </div>
     <ul class="nav navbar-nav navbar-right">
+      <% if session[:student_id] %>
+      <% @student = Student.find(session[:student_id]) %>
+      <li> <%= link_to "Hi, #{@student.name}!", student_path(@student) %></li>
+      <% end %>
       <li> <%= link_to "Students", students_path  %></li>
       <li> <%= link_to "Planks", planks_path %></li>
       <li> <% if current_student%>

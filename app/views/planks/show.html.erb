@@ -3,9 +3,9 @@
 Type: <%= @plank.planktype %>
 <hr>
 <% @plank.students.each do |student| %>
-Student: <%= student.name  %>
+  <%= student.name %>: <%= student.student_planks.select { |sp| sp.plank_id == @plank.id }[0].duration %><br>
+  <% end %>
   <br>
-<% end %>
 <br>
 <% if current_student.id == 5 %>
   <%= link_to "Edit Plank", edit_plank_path(@plank) %>

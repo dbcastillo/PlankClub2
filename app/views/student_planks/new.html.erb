@@ -1,11 +1,11 @@
 <h1>Log a new Plank</h1>
-
+<hr>
+<hr>
 <%= form_for @student_plank, :url => student_planks_path do |f| %>
-  <%= f.label :plank %>
-  <%= f.collection_select :plank_id, Plank.all, :id, :planktype %>
+  <h4><%= f.label :plank %>
+  <%= f.collection_select :plank_id, Plank.all, :id, :planktype %></h4>
   <br>
-  <%= f.label :duration %>
-  <%= f.text_field :duration %>
+  <h4><%= f.label :duration %> (MINUTES.SECONDS) <%= f.text_field :duration %></h4>
   <br>
   <%= f.submit %>
   <% end %>
