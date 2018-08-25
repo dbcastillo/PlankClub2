@@ -1,8 +1,9 @@
-one = Student.create(name: "Masud", mod: 2)
-two = Student.create(name: "Derick", mod: 2)
-three = Student.create(name: "Vadim", mod: 1)
-four = Student.create(name: "Gina", mod: 1)
-five = Student.create(name: "Tito", mod: 2)
+one = Student.create(name: "Masud", mod: 2, username: "masud", password: "1", img_url: "Masud.png")
+two = Student.create(name: "D-rock", mod: 2, username: "d-rock", password: "1", img_url: "Drock.png")
+three = Student.create(name: "Amirata", mod: 2, username: "amirata", password: "1", img_url: "Amirata.png")
+four = Student.create(name: "Bryan", mod: 2, username: "bryan", password: "1", img_url: "Bryan.png")
+five = Student.create(name: "Tito", mod: 2, username: "tito", password: "1", img_url: "Tito.png")
+
 
 onee = Plank.create(planktype: "High Plank")
 twoo = Plank.create(planktype: "Low Plank")

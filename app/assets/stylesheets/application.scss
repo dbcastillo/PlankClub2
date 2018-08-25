@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "background";
+
+.center {
+    margin: 0;
+    width: 50%;
+    border: 3px solid green;
+    padding: 0;
+}
+
+.mx-auto {
+  margin: auto;
+  color: auto;
+  background-color: rgba(101,124,160, 0.2);
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.new-user-button {
+  font-size: 3em;
+  display: inline-block;
+  transition: 10s;
+
+  &:hover {
+    text-decoration: none;
+    color: white;
+    transform: scale(5);
+  }
+}
+// .mt-0 {
+//   margin-top: 0;
+// }
+//
+// .ml-1 {
+//   margin-left: ($spacer-x * .25) !important;
+// }
+//
+// .px-2 {
+//   padding-left: ($spacer-x * .5) !important;
+//   padding-right: ($spacer-x * .5) !important;
+// }
+//
+// .p-3 {
+//   padding: $spacer-y $spacer-x !important;
+// }

@@ -1,7 +1,20 @@
+<h1>Plank Club Leaderboard</h1>
+<br>
+<br>
 <% @planks.each do |plank| %>
-<%= plank.planktype %> :
-<% plank.students.each do |student| %>
-<ol> <%= student.name %> : <%= (student.student_planks.select {|student_plank| student_plank.plank == plank})[0].duration %> </ol>
+  <h4> <%= plank.planktype %> </h4>
+    <% studentPlank = plank.student_planks.order(duration: :asc).last %>
+    <ol><%= studentPlank.student.name%> : <%= studentPlank.duration %></ol>
 <% end %>
-<br></br>
-<% end %>
+
+<!DOCTYPE css>
+<style media="screen">
+  h1 {
+    font-family: 'Roboto';
+    font-variant: small-caps;
+    letter-spacing: 0.5em;
+    text-shadow: 10px 10px 10px rgba(0,0,0, 0.5);
+    font-size: 35px;
+    font-weight: bolder;
+    color: #32CD30;
+  }

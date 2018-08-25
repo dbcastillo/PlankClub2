@@ -1,0 +1,12 @@
+<h2>Plank Club Log in</h2>
+
+<%= form_tag '/login' do %>
+  <%= label_tag :username %>
+  <%= text_field_tag :username %>
+  <%= label_tag :password %>
+  <%= password_field_tag :password %>
+  <%= submit_tag "Login" %>
+<% end %>
+<br>
+<br>
+<%= link_to "New Users Click Here", new_student_path, class: 'new-user-button' %>

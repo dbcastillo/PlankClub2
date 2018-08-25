@@ -3,10 +3,12 @@
 Type: <%= @plank.planktype %>
 <hr>
 <% @plank.students.each do |student| %>
-Student: <%= student.name  %>
+  <%= student.name %>: <%= student.student_planks.select { |sp| sp.plank_id == @plank.id }[0].duration %><br>
+  <% end %>
   <br>
-<% end %>
 <br>
-<%= link_to "Edit Plank", edit_plank_path(@plank) %>
-<%= link_to 'Delete Plank', plank_path(@plank), method: :delete,
-data: { confirm: 'Are you sure?' } %>  
+<% if current_student.id == 5 %>
+  <%= link_to "Edit Plank", edit_plank_path(@plank) %>
+  <%= link_to 'Delete Plank', plank_path(@plank), method: :delete,
+data: { confirm: 'Are you sure?' } %>
+<% end %>
