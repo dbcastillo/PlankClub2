@@ -1,24 +1,54 @@
-# README
+# Plank Club
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Plank Club, a Rails App allowing users to track plank exercises
+and create new ones also.
 
-Things you may want to cover:
 
-* Ruby version
+## Application Features
 
-* System dependencies
+* User can log in with a username and password
+* User can create a new account
+* User can log a new plank
+* User can edit their profile information
 
-* Configuration
+## Built With
 
-* Database creation
+* Ruby
+* Rails API utilizing Active Model Serializers
+* SQLite3 as the database for Active Record
+* Bootstrap for styling
 
-* Database initialization
+## Back-End Repository
 
-* How to run the test suite
+https://github.com/dbcastillo/Mod5Backend
 
-* Services (job queues, cache servers, search engines, etc.)
+## Server-Side Install Instructions
 
-* Deployment instructions
+1. Run ```bundle install```
+2. Run ```rake db:create```
+3. Run ```rake db:migrate```
+4. Run ```rake db:seed```
+5. Run ```rails s -p 3001```
 
-* ...
+## Client-Side Install Instructions
+
+1. Run ```npm install```
+2. Run ```npm start```
+
+
+## Contributing
+
+[CONTRIBUTING.md](https://gist.github.com/dbcastillo/75308bee09c36e8e8aedd58a6de0e37f)
+
+## Author
+
+**Derick Castillo**
+**Masud Ahmed**
+
+## License
+
+[LICENSE.md](LICENSE.md)
+
+## Acknowledgments
+
+* Special thanks to Eric Kim and Tony Lam for their helpful tips

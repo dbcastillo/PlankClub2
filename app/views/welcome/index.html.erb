@@ -4,7 +4,7 @@
 <% @planks.each do |plank| %>
   <h4> <%= plank.planktype %> </h4>
     <% studentPlank = plank.student_planks.order(duration: :asc).last %>
-    <ol><%= studentPlank.student.name%> : <%= studentPlank.duration %></ol>
+    <ol><%= studentPlank.student.name %> : <%= studentPlank.duration %></ol>
 <% end %>
 
 <!DOCTYPE css>

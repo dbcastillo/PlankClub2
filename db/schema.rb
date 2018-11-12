@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2018_08_20_191243) do
 
   create_table "students", force: :cascade do |t|
     t.string "name"
-    t.integer "mod"
+    t.integer "class_number"
     t.string "username"
     t.string "password_digest"
     t.string "img_url"

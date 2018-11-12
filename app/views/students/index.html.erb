@@ -3,7 +3,7 @@
 <ul>
   <% @students.each do |student| %>
   <li> <%= link_to student.name, student_path(student) %>
-    -- Mod: <%= student.mod %>
+    -- Class Number: <%= student.class_number %>
     <hr>
   </li>
   <% end %>

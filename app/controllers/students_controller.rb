@@ -40,6 +40,7 @@ class StudentsController < ApplicationController
 
   def destroy
     @student = Student.find(params[:id])
+    session.delete(:student_id)
     @student.destroy
     redirect_to students_path
   end
@@ -47,11 +48,11 @@ class StudentsController < ApplicationController
   private
 
   def student_params
-    params.require(:student).permit(:name, :mod, :img_url)
+    params.require(:student).permit(:name, :class_number, :img_url)
   end
 
   def username_params
-    params.require(:student).permit(:username, :password, :name, :mod, :img_url)
+    params.require(:student).permit(:username, :password, :name, :class_number, :img_url)
   end
 
   def authorized
