@@ -42,6 +42,8 @@ class StudentsController < ApplicationController
     @student = Student.find(params[:id])
     session.delete(:student_id)
     @student.destroy
+    @student_planks = StudentPlank.where(student_id: params[:id])
+    @student_planks.destroy_all
     redirect_to students_path
   end
 

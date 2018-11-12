@@ -51,6 +51,8 @@ class StudentPlanksController < ApplicationController
     @student = Student.find(params[:id])
     @student_plank = StudentPlank.find(params[:sp_id])
     @student_plank.destroy
+    @student_plank.plank.destroy
+    @student_plank.student.destroy
     redirect_to student_path(@student)
   end
 
