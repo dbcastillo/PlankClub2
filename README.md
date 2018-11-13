@@ -7,9 +7,10 @@ and create new ones also.
 ## Application Features
 
 * User can log in with a username and password
-* User can create a new account
+* New user can create an account
 * User can log a new plank
 * User can edit their profile information
+* User can view other user's profiles/plank info
 
 ## Built With
 
@@ -18,32 +19,19 @@ and create new ones also.
 * SQLite3 as the database for Active Record
 * Bootstrap for styling
 
-## Back-End Repository
-
-https://github.com/dbcastillo/Mod5Backend
-
-## Server-Side Install Instructions
+## Install Instructions
 
 1. Run ```bundle install```
-2. Run ```rake db:create```
-3. Run ```rake db:migrate```
-4. Run ```rake db:seed```
-5. Run ```rails s -p 3001```
-
-## Client-Side Install Instructions
-
-1. Run ```npm install```
-2. Run ```npm start```
-
+2. Run ```rails s```
 
 ## Contributing
 
 [CONTRIBUTING.md](https://gist.github.com/dbcastillo/75308bee09c36e8e8aedd58a6de0e37f)
 
-## Author
+## Authors
 
-**Derick Castillo**
-**Masud Ahmed**
+* **Derick Castillo**
+* **Masud Ahmed**
 
 ## License
 
@@ -51,4 +39,5 @@ https://github.com/dbcastillo/Mod5Backend
 
 ## Acknowledgments
 
+* Special thanks to Masud Ahmed for his contributions to this project
 * Special thanks to Eric Kim and Tony Lam for their helpful tips
