@@ -1,3 +1,6 @@
+# Link to Demo Video
+* https://youtu.be/a6l_3YW39qQ 
+
 # Plank Club
 
 Plank Club, a Rails App allowing users to track plank exercises
