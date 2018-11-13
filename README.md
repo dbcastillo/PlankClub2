@@ -15,7 +15,7 @@ and create new ones also.
 ## Built With
 
 * Ruby
-* Rails API utilizing Active Model Serializers
+* Rails framework with MVC architecture
 * SQLite3 as the database for Active Record
 * Bootstrap for styling
 
