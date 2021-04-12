@@ -1,3 +1,7 @@
+Student.destroy_all
+Plank.destroy_all
+StudentPlank.destroy_all
+
 one = Student.create(name: "Masud", class_number: 2, username: "masud", password: "1", img_url: "Masud.png")
 two = Student.create(name: "Derick", class_number: 2, username: "derick", password: "1", img_url: "Drock.png")
 three = Student.create(name: "Amirata", class_number: 2, username: "amirata", password: "1", img_url: "Amirata.png")
